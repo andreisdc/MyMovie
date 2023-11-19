@@ -1,0 +1,37 @@
+<mat-toolbar class="header-style">
+
+    <span class = "logo-style">My Movie</span>
+    <a class="button-style" mat-button (click)="toUserPage()"> Home </a>
+    <a class="button-style" mat-button> Movies </a>
+    <a class="button-style" mat-button> Serials </a>
+    <a class="button-style" mat-button> Cartoons </a>
+    <a class="button-style" mat-button> Anime </a>
+
+    <button mat-icon-button class = "button-drop-style" [matMenuTriggerFor]="menu">
+        <mat-icon>more_vert</mat-icon>
+    </button>
+
+    <mat-menu #menu="matMenu">
+        <div *ngIf="checkAdmin()">
+            <button mat-menu-item (click)="toAdminPage()">
+                <mat-icon>build</mat-icon>
+                <span>Admin</span>
+              </button>
+        </div>
+        
+        <button mat-menu-item disabled>
+          <mat-icon>voicemail</mat-icon>
+          <span>Check voice mail</span>
+        </button>
+    
+        
+        <div *ngIf="!checkAdmin()">
+            <button mat-menu-item (click)="buyAdmin()">
+                <mat-icon>payment</mat-icon>   
+                <span>Buy Admin</span>
+            </button>
+        </div>
+
+      </mat-menu>
+
+</mat-toolbar>

@@ -1,0 +1,18 @@
+html {
+    margin: 0px;
+    height: auto;
+    width: auto;
+  }
+  body {
+    background-image: linear-gradient(rgb(13, 13, 13), rgb(0, 0, 0));  
+    margin: 0px;
+    min-height: 5268px;
+    width: auto;
+  }
+
+  .film-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding: 20px;
+  }

@@ -1,0 +1,30 @@
+<mat-card class="center-container">
+    <mat-card-content>
+        <h2 class="title">My Movie</h2>
+      <form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+        <mat-form-field class="example-full-width">
+          <input matInput placeholder="Email" formControlName="email">
+          <mat-error *ngIf="loginForm.get('email')?.hasError('required')">Email is required</mat-error>
+          <mat-error *ngIf="loginForm.get('email')?.hasError('email')">Invalid email address</mat-error>
+        </mat-form-field>
+
+        <mat-form-field class="example-full-width">
+          <input matInput placeholder="Password" type="password" formControlName="password">
+          <mat-error *ngIf="loginForm.get('password')?.hasError('required')">Password is required</mat-error>
+          <mat-error *ngIf="loginForm.get('password')?.hasError('minlength')">Password must be at least 8 characters long</mat-error>
+        </mat-form-field>
+
+        <mat-card-content>
+            <p class="text">Don't have an account? <a class="text" routerLink="/signup">Register</a></p>
+        </mat-card-content>
+
+        <button class="button" type="submit">Login</button>
+        
+      </form>
+    </mat-card-content>
+  </mat-card>
+
+  <mat-card>
+    
+  </mat-card>
+  

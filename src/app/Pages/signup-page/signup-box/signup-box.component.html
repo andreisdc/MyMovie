@@ -1,0 +1,35 @@
+<mat-card class="center-container">
+    <mat-card-content>
+        <h2 class="title">My Movie</h2>
+      <form [formGroup]="signupForm" (ngSubmit)="onSubmit()">
+
+        <mat-form-field class="example-full-width">
+            <input matInput placeholder="Username" formControlName="username">
+            <mat-error *ngIf="signupForm.get('email')?.hasError('required')">Email is required</mat-error>
+            <mat-error *ngIf="signupForm.get('email')?.hasError('email')">Invalid email address</mat-error>
+        </mat-form-field>
+
+        <mat-form-field class="example-full-width">
+          <input matInput placeholder="Email" formControlName="email">
+          <mat-error *ngIf="signupForm.get('email')?.hasError('required')">Email is required</mat-error>
+          <mat-error *ngIf="signupForm.get('email')?.hasError('email')">Invalid email address</mat-error>
+        </mat-form-field>
+
+        <mat-form-field class="example-full-width">
+          <input matInput placeholder="Password" type="password" formControlName="password">
+          <mat-error *ngIf="signupForm.get('password')?.hasError('required')">Password is required</mat-error>
+          <mat-error *ngIf="signupForm.get('password')?.hasError('minlength')">Password must be at least 8 characters long</mat-error>
+        </mat-form-field>
+
+        <mat-form-field class="example-full-width">
+            <input matInput placeholder="Repeat Password" type="password" formControlName="password">
+            <mat-error *ngIf="signupForm.get('password')?.hasError('required')">Password is required</mat-error>
+            <mat-error *ngIf="signupForm.get('password')?.hasError('minlength')">Password must be at least 8 characters long</mat-error>
+          </mat-form-field>
+
+        <mat-card-content>  
+    </mat-card-content>
+
+    <button class="button" type="submit">Signup</button>
+</form>
+</mat-card-content>

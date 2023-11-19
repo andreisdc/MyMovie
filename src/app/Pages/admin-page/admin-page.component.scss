@@ -1,0 +1,15 @@
+body{
+    background-image: linear-gradient(#D7D7D7, #99AFFF);  
+    margin: 0px;
+    min-height: auto;
+    width: auto;
+    display: flex;
+    flex-direction: row;
+  }
+  
+  .film-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding: 20px;
+}

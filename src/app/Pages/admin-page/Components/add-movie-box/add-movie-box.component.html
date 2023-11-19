@@ -1,0 +1,29 @@
+<mat-card class="center-container">
+
+    <div class="hiden-element"></div>
+
+    <form [formGroup]="movieForm" (ngSubmit)="onSubmit()" class="movie-form">
+
+        <mat-form-field>
+          <input class="input-style" matInput placeholder="Nume Film" formControlName="name" />
+        </mat-form-field>
+      
+        <mat-form-field class="input-style">
+            <mat-label>Tip Film</mat-label>
+            <mat-select formControlName="type">
+              <mat-option *ngFor="let movieType of movieTypes" [value]="movieType">
+                {{ movieType }}
+              </mat-option>
+            </mat-select>
+          </mat-form-field>
+        
+
+        <button class="input-button" mat-raised-button type="submit">
+          Adaugă Film
+        </button>
+
+        
+
+      </form>
+  </mat-card>
+  

@@ -1,0 +1,66 @@
+.movie-style{
+    width: 300px;
+    height: 450px;
+    border: 1px solid white;
+    margin-right: 100px;
+    color: white;
+}
+
+.grid-list-box{
+    display: flex;
+    flex-direction: row;
+    margin-left: 100px;
+    overflow-x: hidden; /* Ascunde scroll-ul orizontal */
+}
+
+.title{
+    color: white;
+    font-size: 50px;
+    margin-left: 100px;
+    margin-top: 140px;
+}
+
+.movie-image{
+    width: 300px;
+    height: 350px;
+}
+
+.title-style{
+    color: white;
+    margin-left: 15px;
+    font-size: 25px;
+    margin-top: 20px;
+}
+
+.type-style{
+    margin-left: 15px;
+    font-size: 15px;
+    margin-top: 10px;
+}
+
+.button-style-left{
+    width: 60px;
+    height: 60px;
+    position: relative;
+    top: 250px;
+    left: 4%;
+    background-color: rgb(130, 17, 17);
+    opacity: 0.5;
+    color: white;
+    font-size: 40px;
+    z-index: 2 ;
+}
+
+.button-style-right{
+    width: 60px;
+    height: 60px;
+    position: relative;
+    top: 250px;
+    right: -90%;
+    z-index: 1;
+    background-color: rgb(130, 17, 17);
+    opacity: 0.5;
+    color: white;
+    font-size: 40px;
+}
+

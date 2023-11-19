@@ -1,0 +1,90 @@
+
+<!-- NEW MOVIE -->
+
+<p class="title">New Movie</p>
+
+<div>
+  <button (click)="moveMovies('left')" class="button-style-left"> < </button>
+  <button (click)="moveMovies('right')" class="button-style-right"> > </button>
+</div>
+
+<div class="grid-list-box">
+  <div *ngFor="let movie of getReversedMovies(); let i = index">
+    <ng-container *ngIf="i < 5">
+      <div class="movie-style">
+        <img [src]="getImagePath(getCount() - i + 1 )" alt="{{ movie.name }} Image" class="movie-image">
+        <p class="title-style">{{ movie.name }}</p>
+        <p class="type-style">{{ movie.type }}</p>
+      </div>
+    </ng-container>
+  </div>
+</div>
+  
+<!-------------------------------------------------------------->
+
+  
+
+<!-- Comedy -->
+
+<p class="title">Comedy</p>
+
+<div>
+  <button (click)="moveMovies('left')" class="button-style-left"> < </button>
+  <button (click)="moveMovies('right')" class="button-style-right"> > </button>
+</div>
+
+<div class="grid-list-box">
+  <div *ngFor="let movie of getComedyMovies()">
+      <div class="movie-style">
+        <img [src]="getImagePath(movie.id - 1)" alt="{{ movie.name }} Image" class="movie-image">
+        <p class="title-style">{{ movie.name }}</p>
+        <p class="type-style">{{ movie.type }}</p>
+      </div>
+  </div>
+</div>
+  
+<!-------------------------------------------------------------->
+
+  
+
+<!-- Action -->
+
+<p class="title">Action</p>
+
+<div>
+  <button (click)="moveMovies('left')" class="button-style-left"> < </button>
+  <button (click)="moveMovies('right')" class="button-style-right"> > </button>
+</div>
+
+<div class="grid-list-box">
+  <div *ngFor="let movie of getActionMovies()">
+      <div class="movie-style">
+        <img [src]="getImagePath(movie.id - 1)" alt="{{ movie.name }} Image" class="movie-image">
+        <p class="title-style">{{ movie.name }}</p>
+        <p class="type-style">{{ movie.type }}</p>
+      </div>
+  </div>
+</div>
+<!-------------------------------------------------------------->
+
+<!-- Action -->
+
+<p class="title">Action</p>
+
+<div>
+  <button (click)="moveMovies('left')" class="button-style-left"> < </button>
+  <button (click)="moveMovies('right')" class="button-style-right"> > </button>
+</div>
+
+<div class="grid-list-box">
+  <div *ngFor="let movie of getAnimeMovies()">
+      <div class="movie-style">
+        <img [src]="getImagePath(movie.id - 1)" alt="{{ movie.name }} Image" class="movie-image">
+        <p class="title-style">{{ movie.name }}</p>
+        <p class="type-style">{{ movie.type }}</p>
+      </div>
+  </div>
+</div>
+<!-------------------------------------------------------------->
+
+  
