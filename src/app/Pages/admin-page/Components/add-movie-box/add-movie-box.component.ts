@@ -30,7 +30,6 @@ export class AddMovieBoxComponent {
     this.movieForm = this.fb.group({
       name: ['', Validators.required],
       type: ['', Validators.required],
-      imageNumber: ['', Validators.required],
     });
   }
 
@@ -39,6 +38,7 @@ export class AddMovieBoxComponent {
 
     if (this.movieForm.valid) {
       const newMovie = {
+        
         id: this.movieService.getMoviesLength() + 1,
         name: this.movieForm.get('name')?.value,
         type: this.movieForm.get('type')?.value,

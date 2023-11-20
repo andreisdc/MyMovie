@@ -28,7 +28,6 @@ import { MatButtonModule} from '@angular/material/button';
 import {MatMenuModule} from '@angular/material/menu';
 import {MatCardModule} from '@angular/material/card';
 import {NoopAnimationsModule} from '@angular/platform-browser/animations';
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {MatRadioModule} from '@angular/material/radio';
 import { MatSliderModule } from '@angular/material/slider';
 import { AdminPageComponent } from './Pages/admin-page/admin-page.component';
@@ -63,7 +62,6 @@ import { AdminPageComponent } from './Pages/admin-page/admin-page.component';
     FormsModule,
     ReactiveFormsModule,
     NoopAnimationsModule,
-    BrowserAnimationsModule,
     HttpClientModule,
     MatRadioModule,
     MatSliderModule
